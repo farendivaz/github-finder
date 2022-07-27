@@ -14,7 +14,11 @@ const UserResults = () => {
       </div>
     );
   } else {
-    return <h1 className="text-center mx-auto text-4xl">Loading...</h1>;
+    return (
+      <div className="flex justify-center items-center w-full h-full mt-8">
+        <progress class="progress progress-secondary w-96 mx-auto text-center"></progress>
+      </div>
+    );
   }
 };
 

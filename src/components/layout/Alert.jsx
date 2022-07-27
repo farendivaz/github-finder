@@ -5,7 +5,7 @@ const Alert = () => {
   const { alert } = useContext(AlertContext);
   return (
     alert !== null && (
-      <p className="flex items-start mb-4 space-x-2">
+      <p className="flex items-center justify-center mb-4 space-x-2">
         {alert.type === "error" && (
           <svg
             fill="none"
@@ -20,7 +20,7 @@ const Alert = () => {
             ></path>
           </svg>
         )}
-        <p className="flex-1 text-base font-semibold leading-7 text-white">
+        <p className="flex flex-row mx-auto justify-center items-center text-base font-semibold leading-7 text-white">
           <strong>{alert.msg}</strong>
         </p>
       </p>

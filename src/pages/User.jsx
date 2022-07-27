@@ -41,7 +41,11 @@ const User = () => {
   const websiteUrl = blog?.startsWith("http") ? blog : "https://" + blog;
 
   if (loading) {
-    return <h1 className="text-center mx-auto text-4xl">Loading...</h1>;
+    return (
+      <div className="flex justify-center items-center w-full h-full mt-8">
+        <progress class="progress progress-secondary w-96 mx-auto text-center"></progress>
+      </div>
+    );
   } else {
     return (
       <>
@@ -97,7 +101,7 @@ const User = () => {
                 {blog && (
                   <div className="stat">
                     <div className="stat-title text-md">Website</div>
-                    <div className="text-lg stat-value">
+                    <div className="text-lg stat-value hover:text-gray-200">
                       <a href={websiteUrl} target="_blank" rel="noreferrer">
                         {websiteUrl}
                       </a>
@@ -107,7 +111,7 @@ const User = () => {
                 {twitter_username && (
                   <div className="stat">
                     <div className="stat-title text-md">Twitter</div>
-                    <div className="text-lg stat-value">
+                    <div className="text-lg stat-value hover:text-gray-200">
                       <a
                         href={`https://twitter.com/${twitter_username}`}
                         target="_blank"

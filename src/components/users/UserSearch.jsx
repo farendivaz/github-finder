@@ -26,19 +26,19 @@ const UserSearch = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
+    <div className="flex flex-row justify-center items-center xl:w-6/12 lg:w-6/12 md:w-8/12 mx-auto mb-8 gap-8">
       <div>
         <form onSubmit={handleSubmit}>
           <div className="form-control">
-            <div className="relative">
+            <div className="flex flex-row justify-center items-center ">
               <input
                 type="text"
-                className="w-full pr-40 bg-gray-200 input input-lg text-black"
+                className="w-full pr-80 bg-gray-200 input input-md rounded-r-none text-black text-lg font-base"
                 placeholder="Search"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
-              <button className="absolute top-0 right-0 rounded-l-none w-36 btn btn-lg">
+              <button className="rounded-md rounded-l-none px-12 py-2 btn btn-md font-bold">
                 Go
               </button>
             </div>
@@ -48,7 +48,7 @@ const UserSearch = () => {
       {users.length > 0 && (
         <div>
           <button
-            className="btn btn-ghost btn-lg"
+            className="btn btn-ghost btn-md px-8 ml-[-24px] border-white"
             onClick={() => dispatch({ type: "CLEAR_USERS" })}
           >
             Clear
