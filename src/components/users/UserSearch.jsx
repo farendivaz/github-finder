@@ -33,12 +33,12 @@ const UserSearch = () => {
             <div className="flex flex-row justify-center items-center ">
               <input
                 type="text"
-                className="w-full pr-80 bg-gray-200 input input-md rounded-r-none text-black text-lg font-base"
+                className="w-full pr-60 bg-gray-200 input input-md rounded-r-none text-black text-lg font-base"
                 placeholder="Search"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
-              <button className="rounded-md rounded-l-none px-12 py-2 btn btn-md font-bold">
+              <button className="rounded-md rounded-l-none px-10 py-2 btn btn-md font-bold">
                 Go
               </button>
             </div>
