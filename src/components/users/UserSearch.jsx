@@ -26,29 +26,28 @@ const UserSearch = () => {
   };
 
   return (
-    <div className="flex flex-row justify-center items-center xl:w-6/12 lg:w-6/12 md:w-8/12 mx-auto mb-8 gap-8">
-      <div>
-        <form onSubmit={handleSubmit}>
-          <div className="form-control">
-            <div className="flex flex-row justify-center items-center ">
-              <input
-                type="text"
-                className="w-full pr-60 bg-gray-200 input input-md rounded-r-none text-black text-lg font-base"
-                placeholder="Search"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-              />
-              <button className="rounded-md rounded-l-none px-10 py-2 btn btn-md font-bold">
-                Go
-              </button>
-            </div>
+    <div className="flex flex-row justify-center items-center xl:w-4/5 lg:w-4/5 md:w-4/5 mx-auto mb-8 gap-8">
+      <form onSubmit={handleSubmit} className="w-full md:w-5/12 ">
+        <div className="form-control">
+          <div className="flex flex-row justify-center items-center">
+            <input
+              type="text"
+              className="w-4/5 md:w-full lg:w-full bg-gray-200 input input-md  rounded-r-none text-black text-lg font-base"
+              placeholder="Search"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+            <button className="rounded-md rounded-l-none px-6 py-2 btn btn-md font-bold">
+              Go
+            </button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
+
       {users.length > 0 && (
         <div>
           <button
-            className="btn btn-ghost btn-md px-8 ml-[-24px] border-white"
+            className="btn btn-ghost btn-md px-4 ml-[-24px] border-white"
             onClick={() => dispatch({ type: "CLEAR_USERS" })}
           >
             Clear
